@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SmartLearningStore - Home</title>
+    <!-- Font Awesome CDN Link for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: white;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            margin: 0;
+        }
+
+        /* Logo Style */
+        .logo {
+            font-size: 3rem;
+            color: white;
+            background-color: #feb47b;
+            border-radius: 50%;
+            padding: 20px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: #333;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #feb47b;
+        }
+
+        .menu {
+            display: none;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .menu a {
+            font-size: 1rem;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: #333;
+            text-align: center;
+        }
+
+        .menu a:hover {
+            background-color: #feb47b;
+        }
+
+        .hamburger {
+            display: block;
+            cursor: pointer;
+        }
+
+        /* Main Content */
+        .main-content {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .main-content h2 {
+            font-size: 2rem;
+            margin-top: 10px;
+        }
+
+        /* Categories Section */
+        .categories {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .category {
+            text-align: center;
+            width: 30%;
+            margin-bottom: 30px;
+        }
+
+        .category i {
+            font-size: 80px;
+            margin-bottom: 20px;
+            color: #feb47b;
+            transition: transform 0.3s ease;
+        }
+
+        .category i:hover {
+            transform: scale(1.2); /* Hover effect */
+        }
+
+        .category h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .category p {
+            font-size: 1rem;
+            color: #dcdcdc;
+        }
+
+        /* Button Styles */
+        .button {
+            background-color: #feb47b;
+            color: white;
+            font-size: 1.2rem;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        .button:hover {
+            transform: scale(1.1);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #333;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            display: inline-block;
+            padding: 10px;
+            font-size: 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        footer a:hover {
+            background-color: #feb47b;
+        }
+
+        footer .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        footer .footer-links a {
+            font-size: 1rem;
+            margin: 10px;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        /* Media Queries for Mobile Responsiveness */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .categories {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .category {
+                width: 80%;
+                margin-bottom: 30px;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav a {
+                font-size: 1.2rem;
+                padding: 12px 25px;
+            }
+
+            .main-content h2 {
+                font-size: 1.5rem;
+            }
+
+            .main-content p {
+                font-size: 1rem;
+            }
+
+            .hamburger {
+                display: block;
+                margin-left: auto;
+                cursor: pointer;
+                font-size: 2rem;
+                padding: 10px;
+                background-color: #333;
+                border-radius: 5px;
+                color: white;
+            }
+
+            .menu.active {
+                display: flex;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .category i {
+                font-size: 60px;
+            }
+
+            .category h3 {
+                font-size: 1.2rem;
+            }
+
+            .category p {
+                font-size: 0.9rem;
+            }
+
+            .button {
+                width: 90%;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <i class="fas fa-store"></i>
+        </div>
+        <h1>Welcome to SmartLearningStore</h1>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="hamburger" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="menu">
+            <a href="about-us.html">About</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms-and-conditions.html">Terms</a>
+            <a href="contact-us.html">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h2>Your one-stop shop for Digital Products</h2>
+        <p>Explore our exclusive collection of e-books, courses, and modified APKs, crafted just for you.</p>
+
+        <!-- Categories Section -->
+        <div class="categories">
+            <!-- E-books -->
+            <div class="category">
+                <i class="fas fa-book"></i>
+                <h3>E-books</h3>
+                <p>Find a vast range of e-books across various genres to boost your knowledge and skills.</p>
+            </div>
+
+            <!-- Modified APKs -->
+            <div class="category">
+                <i class="fas fa-cogs"></i>
+                <h3>Modified APKs</h3>
+                <p>Download customized APKs for better performance, premium features, and enhanced experience.</p>
+            </div>
+
+            <!-- Online Courses -->
+            <div class="category">
+                <i class="fas fa-chalkboard-teacher"></i>
+                <h3>Online Courses</h3>
+                <p>Gain valuable skills through professionally designed courses that you can access anytime, anywhere.</p>
+            </div>
+        </div>
+
+        <a href="category.html" class="button">Explore Categories</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="about-us.html">About</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms-and-conditions.html">Terms</a>
+            <a href="contact-us.html">Contact</a>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

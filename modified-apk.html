@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modified APKs - SmartLearningStore</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(45deg, #000000, #333333, #666666);
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .apks {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 50px;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .apk-card {
+            padding: 20px;
+            border: 2px solid #fff;
+            text-decoration: none;
+            font-size: 18px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            color: white;
+            transition: 0.3s;
+            display: block;
+            text-align: center;
+            width: 250px;
+        }
+        .apk-card:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+        .apk-card i {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+        .price {
+            color: #ffcc00;
+            font-weight: bold;
+        }
+        .buy-btn {
+            display: block;
+            margin-top: 10px;
+            padding: 10px;
+            background: #ffcc00;
+            color: black;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .buy-btn:hover {
+            background: #e6b800;
+        }
+        .next-page {
+            margin-top: 30px;
+        }
+        footer {
+            margin-top: 50px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+        }
+        footer a {
+            color: #ffcc00;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        @media (max-width: 600px) {
+            .apks {
+                flex-direction: column;
+                align-items: center;
+            }
+            .apk-card {
+                width: 90%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Choose Your Modified APK</h1>
+    </header>
+    <main>
+        <div class="apks">
+            <div class="apk-card">
+                <i class="fas fa-gamepad"></i>
+                <h3>Clash of Clans MOD</h3>
+                <p>Unlimited Gems, Gold & Elixir.</p>
+                <p class="price">$250</p>
+                <a href="payment.html?apk=clash-of-clans-mod&price=250" class="buy-btn">Buy Now</a>
+            </div>
+            <div class="apk-card">
+                <i class="fas fa-music"></i>
+                <h3>Spotify Premium MOD</h3>
+                <p>Ad-Free, Unlimited Skips, Offline Mode.</p>
+                <p class="price">$220</p>
+                <a href="payment.html?apk=spotify-premium-mod&price=220" class="buy-btn">Buy Now</a>
+            </div>
+            <div class="apk-card">
+                <i class="fas fa-film"></i>
+                <h3>Netflix Premium MOD</h3>
+                <p>Full HD Streaming, No Ads.</p>
+                <p class="price">$300</p>
+                <a href="payment.html?apk=netflix-premium-mod&price=300" class="buy-btn">Buy Now</a>
+            </div>
+        </div>
+        <div class="next-page">
+            <a href="modified-apk2.html" class="buy-btn">Next Page</a>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 SmartLearningStore. All rights reserved.</p>
+        <nav>
+            <a href="about-us.html">About</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms-and-conditions.html">Terms</a>
+            <a href="contact-us.html">Contact</a>
+        </nav>
+    </footer>
+</body>
+</html>
